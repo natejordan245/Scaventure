@@ -1,6 +1,93 @@
 Executive Summary:
 Scaventure is an interactive mobile app that transforms traditional scavenger hunts into engaging group experiences. The app combines location-based challenges, team dynamics, and gamification to create memorable adventures in various cities. Users can participate in themed hunts, complete challenges, earn points, and share their experiences with friends.
 
+## Project Setup & Testing
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+- Git
+
+### Installation
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/scaventure.git
+cd scaventure
+```
+
+2. Install server dependencies:
+```bash
+cd server
+npm install
+```
+
+3. Install client dependencies:
+```bash
+cd ../client
+npm install
+```
+
+### Running the Application
+
+1. Start the server:
+```bash
+cd server
+npm run dev
+```
+The server will run on http://localhost:3000
+
+2. Start the client (in a new terminal):
+```bash
+cd client
+npm start
+```
+The client will run on http://localhost:19006
+
+### Running Tests
+
+1. API Tests:
+```bash
+cd server
+node test-api.js
+```
+This will run comprehensive tests for all API endpoints:
+- Base endpoint
+- User endpoints (register, login, get users)
+- Hunt endpoints (create, get hunts)
+- Team endpoints (create, get teams)
+
+2. Test Results:
+- The test script will display detailed results for each endpoint
+- Success/failure status for each test
+- Response data for successful requests
+- Error messages for failed requests
+- A summary of total successful endpoints
+
+### Troubleshooting
+
+If you encounter the "EADDRINUSE: address already in use :::3000" error:
+1. Find the process using port 3000:
+```bash
+# On Windows
+netstat -ano | findstr :3000
+# On Unix-based systems
+lsof -i :3000
+```
+
+2. Kill the process:
+```bash
+# On Windows (replace PID with the process ID from step 1)
+taskkill /F /PID <PID>
+# On Unix-based systems
+kill -9 <PID>
+```
+
+3. Restart the server:
+```bash
+cd server
+npm run dev
+```
+
 User Flow:
 
 1. App Launch & Splash Screen
