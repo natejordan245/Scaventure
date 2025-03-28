@@ -1,0 +1,13 @@
+{
+  "progress": [
+    {
+      "id": "1",
+      "teamId": "1",
+      "huntId": "1",
+      "challengeId": "1",
+      "status": "completed",
+      "completedAt": "2024-03-28T00:00:00.000Z",
+      "score": 100
+    }
+  ]
+} 

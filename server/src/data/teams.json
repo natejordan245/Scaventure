@@ -1,0 +1,12 @@
+{
+  "teams": [
+    {
+      "id": "1",
+      "name": "Mystery Solvers",
+      "leaderId": "1",
+      "members": ["1"],
+      "currentHuntId": "1",
+      "createdAt": "2024-03-28T00:00:00.000Z"
+    }
+  ]
+} 

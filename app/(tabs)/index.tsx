@@ -1,74 +1,230 @@
-import { Image, StyleSheet, Platform } from 'react-native';
-
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { FontAwesome5 } from '@expo/vector-icons';
+import { Link } from 'expo-router';
 
 export default function HomeScreen() {
+  const quickActions = [
+    { icon: 'search', title: 'Find Hunt', route: '/(tabs)/hunts' },
+    { icon: 'users', title: 'Join Team', route: '/(tabs)/teams' },
+    { icon: 'map-marker-alt', title: 'Nearby', route: '/(tabs)/hunts' },
+    { icon: 'star', title: 'Featured', route: '/(tabs)/hunts' },
+  ];
+
+  const stats = [
+    { icon: 'trophy', title: 'Hunts Completed', value: '5' },
+    { icon: 'users', title: 'Teams Joined', value: '3' },
+    { icon: 'star', title: 'Rating', value: '4.8' },
+    { icon: 'medal', title: 'Achievements', value: '12' },
+  ];
+
+  const renderQuickAction = ({ icon, title, route }: { 
+    icon: string; 
+    title: string; 
+    route: string 
+  }) => (
+    <Link href={route as any} asChild>
+      <TouchableOpacity style={styles.quickAction}>
+        <View style={styles.quickActionIcon}>
+          <FontAwesome5 name={icon} size={24} color="#f4511e" />
+        </View>
+        <Text style={styles.quickActionTitle}>{title}</Text>
+      </TouchableOpacity>
+    </Link>
+  );
+
+  const renderStat = ({ icon, title, value }: { icon: string; title: string; value: string }) => (
+    <View style={styles.stat}>
+      <View style={styles.statIcon}>
+        <FontAwesome5 name={icon} size={24} color="#f4511e" />
+      </View>
+      <Text style={styles.statValue}>{value}</Text>
+      <Text style={styles.statTitle}>{title}</Text>
+    </View>
+  );
+
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12'
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+    <ScrollView style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.welcome}>Welcome to</Text>
+        <Text style={styles.appName}>Scaventure</Text>
+        <Text style={styles.tagline}>Your Next Adventure Awaits</Text>
+      </View>
+
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Quick Actions</Text>
+        <View style={styles.quickActions}>
+          {quickActions.map((action, index) => (
+            <View key={index} style={styles.quickActionWrapper}>
+              {renderQuickAction(action)}
+            </View>
+          ))}
+        </View>
+      </View>
+
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Your Stats</Text>
+        <View style={styles.stats}>
+          {stats.map((stat, index) => (
+            <View key={index} style={styles.statWrapper}>
+              {renderStat(stat)}
+            </View>
+          ))}
+        </View>
+      </View>
+
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Featured Hunt</Text>
+        <TouchableOpacity style={styles.featuredHunt}>
+          <View style={styles.featuredContent}>
+            <Text style={styles.featuredTitle}>Provo City Mystery</Text>
+            <Text style={styles.featuredDescription}>
+              Explore Provo City's hidden gems in this exciting adventure!
+            </Text>
+            <View style={styles.featuredMeta}>
+              <View style={styles.metaItem}>
+                <FontAwesome5 name="clock" size={14} color="#666" />
+                <Text style={styles.metaText}>45 min</Text>
+              </View>
+              <View style={styles.metaItem}>
+                <FontAwesome5 name="star" size={14} color="#FFC107" />
+                <Text style={styles.metaText}>4.5</Text>
+              </View>
+            </View>
+          </View>
+        </TouchableOpacity>
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
+  container: {
+    flex: 1,
+    backgroundColor: '#f5f5f5',
   },
-  stepContainer: {
-    gap: 8,
+  header: {
+    padding: 24,
+    backgroundColor: '#f4511e',
+  },
+  welcome: {
+    fontSize: 18,
+    color: 'rgba(255, 255, 255, 0.8)',
+  },
+  appName: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: 'white',
+    marginVertical: 8,
+  },
+  tagline: {
+    fontSize: 16,
+    color: 'rgba(255, 255, 255, 0.9)',
+  },
+  section: {
+    padding: 16,
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 16,
+    color: '#333',
+  },
+  quickActions: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    margin: -8,
+  },
+  quickActionWrapper: {
+    width: '50%',
+    padding: 8,
+  },
+  quickAction: {
+    backgroundColor: 'white',
+    borderRadius: 12,
+    padding: 16,
+    alignItems: 'center',
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+  },
+  quickActionIcon: {
     marginBottom: 8,
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+  quickActionTitle: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: '#333',
   },
-});
+  stats: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    margin: -8,
+  },
+  statWrapper: {
+    width: '50%',
+    padding: 8,
+  },
+  stat: {
+    backgroundColor: 'white',
+    borderRadius: 12,
+    padding: 16,
+    alignItems: 'center',
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+  },
+  statIcon: {
+    marginBottom: 8,
+  },
+  statValue: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 4,
+  },
+  statTitle: {
+    fontSize: 14,
+    color: '#666',
+    textAlign: 'center',
+  },
+  featuredHunt: {
+    backgroundColor: 'white',
+    borderRadius: 12,
+    overflow: 'hidden',
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+  },
+  featuredContent: {
+    padding: 16,
+  },
+  featuredTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 8,
+    color: '#333',
+  },
+  featuredDescription: {
+    fontSize: 14,
+    color: '#666',
+    marginBottom: 12,
+  },
+  featuredMeta: {
+    flexDirection: 'row',
+  },
+  metaItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginRight: 16,
+  },
+  metaText: {
+    marginLeft: 4,
+    color: '#666',
+  },
+}); 

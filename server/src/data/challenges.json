@@ -1,0 +1,14 @@
+{
+  "challenges": [
+    {
+      "id": "1",
+      "huntId": "1",
+      "locationId": "1",
+      "type": "trivia",
+      "question": "What year was Provo City founded?",
+      "options": ["1849", "1850", "1851", "1852"],
+      "correctAnswer": "1849",
+      "points": 100
+    }
+  ]
+} 

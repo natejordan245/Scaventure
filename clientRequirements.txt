@@ -1,0 +1,100 @@
+Executive Summary:
+Scaventure is an interactive mobile app that transforms traditional scavenger hunts into engaging group experiences. The app combines location-based challenges, team dynamics, and gamification to create memorable adventures in various cities. Users can participate in themed hunts, complete challenges, earn points, and share their experiences with friends.
+
+User Flow:
+
+1. App Launch & Splash Screen
+   - Display Scaventure logo, business name, and slogan
+   - Brief loading screen introducing app purpose
+   - Smooth transition to main location screen
+
+2. Location Selection
+   - Initial view: Provo City as default location
+   - Background: High-quality city image
+   - Primary action: "Choose Hunt" button
+   - Future expansion: Side arrows to navigate between cities
+
+3. Hunt Selection
+   - Duolingo-style interface with hunt cards
+   - Each card displays:
+     * Themed hunt title
+     * Representative cartoon image
+     * Rating (1-5 stars)
+     * Difficulty level (color-coded: red=hard, yellow=medium, green=easy)
+     * Duration (45 minutes)
+   - Initial offering: 2 themed hunts
+
+4. Hunt Details
+   - Large header image (group activity or AI-generated theme image)
+   - Storyline description
+   - Key information bullet points:
+     * Store visits and challenges
+     * Timing details
+     * Walking distance
+     * Food involvement
+   - Interactive map preview (Duolingo-style progression)
+   - Pricing:
+     * Group hunt: $49.99
+     * Per person: $7-$16 (based on group size)
+   - "Start Group Hunt" button
+
+5. Payment Process
+   - Integration with "Party" payment system
+   - Card payment option with save functionality
+   - Group size selection dropdown
+   - Team name input
+   - "Next" button to proceed
+
+6. Group Formation
+   - Unique QR code and number code display
+   - Group members scan/enter code to join
+   - Real-time member list display
+   - Group leader initiates hunt with "Let's Go" button
+
+7. Hunt Experience
+   a. Map View
+      - Interactive Duolingo-style progression map
+      - Current location indicator
+      - "First Clue" scroll button
+   
+   b. Clue Display
+      - Expandable scroll interface
+      - Story-integrated riddles/clues
+      - Location guidance
+      - Toggle between full/small view
+
+   c. Challenge System
+      - Location verification via geofencing/QR codes
+      - Player randomization for challenge selection
+      - Interactive spinner for challenge selection
+      - Challenge types:
+        * Trivia questions (with hint option)
+        * Photo challenges
+        * Discount code redemption
+        * Puzzles
+        * Group voting activities
+      - Point system:
+        * Individual points
+        * Group points
+      - Progress tracking
+      - "Next" button with score display
+
+8. Hunt Completion
+   - Congratulations screen with:
+     * Final scores (individual and group)
+     * Time taken
+     * Daily and all-time records
+     * Celebration animations
+   - "Next" button to proceed
+
+9. Experience Sharing
+   - Photo gallery of hunt moments
+   - Social media sharing options
+   - Additional features:
+     * Events calendar
+     * Special holiday hunts
+     * Custom hunt creation
+     * Special event packages
+   - Navigation options:
+     * Start new hunt
+     * Return to location selection

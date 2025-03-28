@@ -1,0 +1,23 @@
+{
+  "hunts": [
+    {
+      "id": "1",
+      "title": "Provo City Mystery",
+      "description": "Explore Provo City's hidden gems",
+      "difficulty": "medium",
+      "duration": "45",
+      "rating": 4.5,
+      "price": 49.99,
+      "locations": [
+        {
+          "id": "1",
+          "name": "City Center",
+          "coordinates": {
+            "lat": 40.2338,
+            "lng": -111.6585
+          }
+        }
+      ]
+    }
+  ]
+} 
