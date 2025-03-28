@@ -6,6 +6,13 @@
       "email": "test@example.com",
       "password": "hashed_password_here",
       "createdAt": "2024-03-28T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "username": "testuser2",
+      "email": "test2@example.com",
+      "password": "$2b$10$nTrlo.eNB8I.CoATT//jPeLkFSBVnW8lyMG0ocNAng0l/N.Pz6m0y",
+      "createdAt": "2025-03-28T19:48:18.063Z"
     }
   ]
-} 
+}

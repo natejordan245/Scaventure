@@ -4,9 +4,81 @@
       "id": "1",
       "name": "Mystery Solvers",
       "leaderId": "1",
-      "members": ["1"],
+      "members": [
+        "1"
+      ],
       "currentHuntId": "1",
       "createdAt": "2024-03-28T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "name": "Test Team",
+      "leaderId": "1",
+      "members": [
+        "1"
+      ],
+      "createdAt": "2025-03-28T19:48:18.188Z"
+    },
+    {
+      "id": "3",
+      "name": "Test Team",
+      "leaderId": "1",
+      "members": [
+        "1"
+      ],
+      "createdAt": "2025-03-28T19:48:36.762Z"
+    },
+    {
+      "id": "4",
+      "name": "Test Team",
+      "leaderId": "1",
+      "members": [
+        "1"
+      ],
+      "createdAt": "2025-03-28T19:49:00.934Z"
+    },
+    {
+      "id": "5",
+      "name": "Test Team",
+      "leaderId": "1",
+      "members": [
+        "1"
+      ],
+      "createdAt": "2025-03-28T19:49:28.875Z"
+    },
+    {
+      "id": "6",
+      "name": "Test Team",
+      "leaderId": "1",
+      "members": [
+        "1"
+      ],
+      "createdAt": "2025-03-28T19:49:47.100Z"
+    },
+    {
+      "id": "7",
+      "name": "Test Team",
+      "leaderId": "1",
+      "members": [
+        "1"
+      ],
+      "createdAt": "2025-03-28T19:50:09.895Z"
+    },
+    {
+      "id": "8",
+      "createdAt": "2025-03-28T19:59:19.563Z"
+    },
+    {
+      "id": "9",
+      "createdAt": "2025-03-28T19:59:29.829Z"
+    },
+    {
+      "id": "10",
+      "createdAt": "2025-03-28T20:00:01.190Z"
+    },
+    {
+      "id": "11",
+      "createdAt": "2025-03-28T20:00:10.683Z"
     }
   ]
-} 
+}

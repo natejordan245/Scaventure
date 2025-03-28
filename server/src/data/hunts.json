@@ -18,6 +18,136 @@
           }
         }
       ]
+    },
+    {
+      "id": "2",
+      "title": "Test Hunt",
+      "description": "A test scavenger hunt",
+      "difficulty": "easy",
+      "duration": "30",
+      "rating": 4,
+      "price": 29.99,
+      "locations": [
+        {
+          "name": "Test Location",
+          "coordinates": {
+            "lat": 40.2338,
+            "lng": -111.6585
+          }
+        }
+      ],
+      "createdAt": "2025-03-28T19:48:18.175Z"
+    },
+    {
+      "id": "3",
+      "title": "Test Hunt",
+      "description": "A test scavenger hunt",
+      "difficulty": "easy",
+      "duration": "30",
+      "rating": 4,
+      "price": 29.99,
+      "locations": [
+        {
+          "name": "Test Location",
+          "coordinates": {
+            "lat": 40.2338,
+            "lng": -111.6585
+          }
+        }
+      ],
+      "createdAt": "2025-03-28T19:48:36.740Z"
+    },
+    {
+      "id": "4",
+      "title": "Test Hunt",
+      "description": "A test scavenger hunt",
+      "difficulty": "easy",
+      "duration": "30",
+      "rating": 4,
+      "price": 29.99,
+      "locations": [
+        {
+          "name": "Test Location",
+          "coordinates": {
+            "lat": 40.2338,
+            "lng": -111.6585
+          }
+        }
+      ],
+      "createdAt": "2025-03-28T19:49:00.924Z"
+    },
+    {
+      "id": "5",
+      "title": "Test Hunt",
+      "description": "A test scavenger hunt",
+      "difficulty": "easy",
+      "duration": "30",
+      "rating": 4,
+      "price": 29.99,
+      "locations": [
+        {
+          "name": "Test Location",
+          "coordinates": {
+            "lat": 40.2338,
+            "lng": -111.6585
+          }
+        }
+      ],
+      "createdAt": "2025-03-28T19:49:28.862Z"
+    },
+    {
+      "id": "6",
+      "title": "Test Hunt",
+      "description": "A test scavenger hunt",
+      "difficulty": "easy",
+      "duration": "30",
+      "rating": 4,
+      "price": 29.99,
+      "locations": [
+        {
+          "name": "Test Location",
+          "coordinates": {
+            "lat": 40.2338,
+            "lng": -111.6585
+          }
+        }
+      ],
+      "createdAt": "2025-03-28T19:49:47.089Z"
+    },
+    {
+      "id": "7",
+      "title": "Test Hunt",
+      "description": "A test scavenger hunt",
+      "difficulty": "easy",
+      "duration": "30",
+      "rating": 4,
+      "price": 29.99,
+      "locations": [
+        {
+          "name": "Test Location",
+          "coordinates": {
+            "lat": 40.2338,
+            "lng": -111.6585
+          }
+        }
+      ],
+      "createdAt": "2025-03-28T19:50:09.880Z"
+    },
+    {
+      "id": "8",
+      "createdAt": "2025-03-28T19:59:19.548Z"
+    },
+    {
+      "id": "9",
+      "createdAt": "2025-03-28T19:59:29.814Z"
+    },
+    {
+      "id": "10",
+      "createdAt": "2025-03-28T20:00:01.176Z"
+    },
+    {
+      "id": "11",
+      "createdAt": "2025-03-28T20:00:10.666Z"
     }
   ]
-} 
+}

@@ -12,7 +12,10 @@ export default function RegisterScreen() {
   const dispatch = useDispatch();
 
   const handleRegister = () => {
+    console.log('🔍 Registration attempt:', { name, email });
+    
     if (password !== confirmPassword) {
+      console.error('❌ Passwords do not match');
       // TODO: Show error message
       return;
     }
@@ -30,6 +33,7 @@ export default function RegisterScreen() {
         achievements: 0,
       },
     }));
+    console.log('✅ Registration successful');
   };
 
   return (

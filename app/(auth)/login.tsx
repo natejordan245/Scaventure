@@ -10,6 +10,7 @@ export default function LoginScreen() {
   const dispatch = useDispatch();
 
   const handleLogin = () => {
+    console.log('🔍 Login attempt:', { email });
     // TODO: Implement actual authentication
     dispatch(setUser({
       id: '1',
@@ -23,6 +24,7 @@ export default function LoginScreen() {
         achievements: 12,
       },
     }));
+    console.log('✅ Login successful');
   };
 
   return (
