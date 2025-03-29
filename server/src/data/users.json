@@ -13,6 +13,13 @@
       "email": "test2@example.com",
       "password": "$2b$10$nTrlo.eNB8I.CoATT//jPeLkFSBVnW8lyMG0ocNAng0l/N.Pz6m0y",
       "createdAt": "2025-03-28T19:48:18.063Z"
+    },
+    {
+      "id": "3",
+      "username": "natejordan",
+      "email": "nate.jordan245@gmail.com",
+      "password": "$2b$10$Sty0AkLKzQsLKZSLw/BXLeE2LZubAreeOi3bFPggvCSzcY9I26QT2",
+      "createdAt": "2025-03-29T03:22:51.785Z"
     }
   ]
 }
